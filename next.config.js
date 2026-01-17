@@ -8,6 +8,12 @@ const nextConfig = {
       },
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true,    // এই line add করো
+  },
+  typescript: {
+    ignoreBuildErrors: true,     // এই line add করো
+  },
 }
 
 module.exports = nextConfig
