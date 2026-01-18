@@ -1,50 +1,69 @@
-# 🍔 MinimalBites - Food Delivery App
+# 🍔 MinimalBites – Food Delivery App
 
-A modern food delivery website built with Next.js 15, Express.js, and Tailwind CSS.
+A modern and minimal food delivery web application built with **Next.js 15**, **Express.js**, and **Tailwind CSS**.
 
 ![MinimalBites](https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800)
 
 ---
 
-## 📝 What is this project?
+## 📝 Project Description
 
-MinimalBites is a restaurant website where you can:
-- Browse food items (burgers, pizza, drinks, etc.)
-- Add items to your cart
-- Login as admin to add new menu items
-- Search and filter menu items
+**MinimalBites** is a full-stack restaurant and food delivery website where users can browse food items, manage a shopping cart, and where an admin can manage menu items.  
+The project focuses on clean UI, smooth user experience, and basic admin functionality.
 
 ---
 
-## 🚀 How to Run This Project (Very Easy Steps!)
+## ✨ Features
 
-### Step 1: Install Node.js (If you don't have it)
+- Browse food items (burgers, pizza, drinks, etc.)
+- View detailed information for each food item
+- Add and remove items from the shopping cart
+- Search and filter menu items
+- Admin authentication system
+- Admin can add new food items
 
-1. Go to: https://nodejs.org
-2. Download the **LTS version** (green button)
-3. Install it (just click Next, Next, Finish)
-4. Restart your computer
+---
+
+## 🧠 Feature Explanation
+
+- **Food Listing:** Displays all available food items from the backend
+- **Item Details:** Shows complete details of a selected item using dynamic routing
+- **Cart System:** Allows users to add items to the cart and view them on the cart page
+- **Search & Filter:** Helps users quickly find food items
+- **Admin Login:** Secured login system for admin access
+- **Add Item (Admin):** Admin can add new menu items through a protected route
+
+---
+
+## 🚀 Setup & Installation
+
+### Step 1: Install Node.js
+
+1. Visit https://nodejs.org
+2. Download the **LTS version**
+3. Install and restart your computer
+
+---
 
 ### Step 2: Open the Project Folder
 
-**On Windows:**
+**Using Command Prompt (Windows):**
 1. Open File Explorer
-2. Go to where you saved the `minimalbites` folder
-3. Click on the address bar at the top
-4. Type `cmd` and press Enter
-5. A black window (Command Prompt) will open
+2. Navigate to the `minimalbites` folder
+3. Click the address bar, type `cmd`, and press Enter
 
-**Or use VS Code:**
+**Using VS Code:**
 1. Open VS Code
 2. File → Open Folder → Select `minimalbites`
 3. Terminal → New Terminal
 
-### Step 3: Install Project Files
+---
 
-In the command prompt/terminal, type this and press Enter:
+### Step 3: Install Dependencies
 
 ```bash
 npm install
+
 ```
 
 Wait for it to finish (may take 1-2 minutes).
@@ -77,7 +96,7 @@ To add new items, you need to login:
 
 ---
 
-## 📂 Project Pages
+## 📂 Route Summary
 
 | Page          | URL                  | What it does                    |
 |---------------|----------------------|---------------------------------|
