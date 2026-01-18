@@ -19,10 +19,11 @@ export function middleware(request: NextRequest) {
       const loginUrl = new URL('/login', request.url)
       loginUrl.searchParams.set('next', pathname)
       return NextResponse.redirect(loginUrl)
+
     }
   }
   
-  // Redirect logged-in users away from login page
+ 
   if (pathname === '/login') {
     const authCookie = request.cookies.get('mb_auth')
     if (authCookie && authCookie.value === 'true') {
