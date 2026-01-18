@@ -24,7 +24,7 @@ export default function HomePage() {
   const [email, setEmail] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/items')
+    fetch('/api/items')
       .then(res => res.json())
       .then(data => {
         const popular = data.filter((item: MenuItem) => item.isPopular).slice(0, 4)

@@ -1,4 +1,4 @@
-// File: E:\scic assignment\files\minimalbites\minimalbites\app\items\page.tsx
+// File: C:\Users\Nazmul Shishir\Downloads\minimalbites-WITH-CHECKOUT\minimalbites\app\items\page.tsx
 import * as entry from '../../../../app/items/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

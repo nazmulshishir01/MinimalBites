@@ -61,13 +61,6 @@ export default function CartPage() {
     }
   }
 
-  const handleCheckout = () => {
-    clearCart()
-    setCartItems([])
-    setDiscount(0)
-    toast.success('Order placed successfully! 🎉')
-  }
-
   const subtotal = getCartTotal()
   const discountAmount = (subtotal * discount) / 100
   const deliveryFee = subtotal > 30 ? 0 : 4.99
@@ -223,9 +216,9 @@ export default function CartPage() {
                 </div>
               </div>
 
-              <button onClick={handleCheckout} className="btn-primary w-full py-4 text-lg mb-4">
-                Checkout <ArrowRight className="w-5 h-5" />
-              </button>
+              <Link href="/checkout" className="btn-primary w-full py-4 text-lg mb-4 justify-center">
+                Proceed to Checkout <ArrowRight className="w-5 h-5" />
+              </Link>
 
               <Link href="/items" className="block text-center text-primary font-medium hover:underline">
                 Continue Shopping

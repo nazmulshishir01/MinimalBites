@@ -9,10 +9,10 @@ const nextConfig = {
     ],
   },
   eslint: {
-    ignoreDuringBuilds: true,    // এই line add করো
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,     // এই line add করো
+    ignoreBuildErrors: true,
   },
 }
 

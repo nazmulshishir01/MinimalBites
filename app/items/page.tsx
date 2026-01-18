@@ -1,10 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Search, Filter, Star, Clock, ShoppingCart, X, ChevronDown } from 'lucide-react'
+import { Search, Star, Clock, ShoppingCart, X, ChevronDown } from 'lucide-react'
 import { toast } from 'sonner'
 import { addToCart } from '@/lib/cart'
 
@@ -23,21 +22,17 @@ interface MenuItem {
 }
 
 export default function ItemsPage() {
-  const searchParams = useSearchParams()
-  const categoryParam = searchParams.get('category')
-  
   const [items, setItems] = useState<MenuItem[]>([])
   const [filteredItems, setFilteredItems] = useState<MenuItem[]>([])
   const [loading, setLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState(categoryParam || 'all')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const [sortBy, setSortBy] = useState('default')
-  const [showFilters, setShowFilters] = useState(false)
 
   const categories = ['all', 'burgers', 'pizza', 'drinks', 'desserts', 'salads', 'sides']
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/items')
+    fetch('/api/items')
       .then(res => res.json())
       .then(data => {
         setItems(data)
@@ -188,15 +183,6 @@ export default function ItemsPage() {
               </select>
               <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
             </div>
-
-            {/* Mobile Filter Toggle */}
-            <button
-              onClick={() => setShowFilters(!showFilters)}
-              className="md:hidden btn-outline py-2"
-            >
-              <Filter className="w-5 h-5" />
-              Filters
-            </button>
           </div>
 
           {/* Category Pills */}

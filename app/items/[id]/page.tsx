@@ -37,7 +37,7 @@ export default function ItemDetailsPage() {
   useEffect(() => {
     if (params.id) {
       // Fetch item details
-      fetch(`http://localhost:5000/api/items/${params.id}`)
+      fetch(`/api/items/${params.id}`)
         .then(res => {
           if (!res.ok) throw new Error('Item not found')
           return res.json()
@@ -45,7 +45,7 @@ export default function ItemDetailsPage() {
         .then(data => {
           setItem(data)
           // Fetch related items from same category
-          return fetch('http://localhost:5000/api/items')
+          return fetch('/api/items')
         })
         .then(res => res.json())
         .then(allItems => {
@@ -67,7 +67,7 @@ export default function ItemDetailsPage() {
   // Fetch related items when item loads
   useEffect(() => {
     if (item) {
-      fetch('http://localhost:5000/api/items')
+      fetch('/api/items')
         .then(res => res.json())
         .then(allItems => {
           const related = allItems

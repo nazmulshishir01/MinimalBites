@@ -1,9 +1,11 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/items/[id]/page": "app/items/[id]/page.js",
-  "/items/page": "app/items/page.js",
-  "/cart/page": "app/cart/page.js",
+  "/api/items/route": "app/api/items/route.js",
   "/page": "app/page.js",
-  "/login/page": "app/login/page.js",
-  "/items/add/page": "app/items/add/page.js"
+  "/items/page": "app/items/page.js",
+  "/items/add/page": "app/items/add/page.js",
+  "/items/[id]/page": "app/items/[id]/page.js",
+  "/api/items/[id]/route": "app/api/items/[id]/route.js",
+  "/cart/page": "app/cart/page.js",
+  "/checkout/page": "app/checkout/page.js"
 }

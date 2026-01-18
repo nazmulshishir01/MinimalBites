@@ -60,7 +60,7 @@ export default function AddItemPage() {
 
     setLoading(true)
     try {
-      const response = await fetch('http://localhost:5000/api/items', {
+      const response = await fetch('/api/items', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
